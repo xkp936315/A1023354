@@ -1,0 +1,37 @@
+<SCRIPT LANGUAGE="JavaScript">
+
+var checkflag = "false";
+function check(fieldName)
+{
+var field=document.getElementsByName(fieldName);
+if (checkflag == "false")
+{
+for (i = 0; i < field.length; i++) 
+{ 
+field[i].checked = true;
+}
+checkflag = "true"; return "取消全選";
+} else { 
+for (i = 0; i < field.length; i++) { 
+field[i].checked = false;
+} checkflag = "false"; return "全選"; } }
+</script> 
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1</title>
+</head>
+<body>
+	<!--點一下全選後所有checkbox 會全勾，再點一下會全部取消，禁止使用jquery-->
+	<input type="button" value="全選" onClick="this.value=check('list')" ></br>
+	1.桌子<input type="checkbox" name="list" value="desktop"></br>
+	2.椅子<input type="checkbox" name="list" value="chair"></br>
+	3.電視<input type="checkbox" name="list" value="tv"></br>
+	4.洗衣機<input type="checkbox" name="list" value="wash"></br>
+	5.廚房<input type="checkbox" name="list" value="kitchen"></br>
+	6.浴室<input type="checkbox" name="list" value="bathroom"></br>
+</body>
+</body>
+</html>
+
